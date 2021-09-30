@@ -21,7 +21,7 @@ function App() {
     dictionaryApi();
   },[]);
   return (
-    <div className="App" style={{height:'100vh',backgroundColor:'#00A4EF', color:'white'}}>
+    <div className="App" style={{height:'100vh',backgroundColor:'#00008b', color:'white'}}>
       <Container maxWidth="md" style={{display:'flex', flexDirection:'column', height:'100vh'}}>
         <Header />
       </Container>

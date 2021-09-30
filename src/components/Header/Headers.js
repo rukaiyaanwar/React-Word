@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import { createTheme, MenuItem, TextField, ThemeProvider } from '@material-ui/core';
+import category from "../../data/category";
 
 const Headers = () => {
     const darkTheme = createTheme({
@@ -16,16 +17,20 @@ const Headers = () => {
             <span className="header__title">React Word</span>
             <div className="header__inputs">
                 <ThemeProvider theme={darkTheme}>
-                    <TextField id="filled-basic" label="Type Here" variant="filled" />
-                    <TextField 
-                    id="filled-select-currency" 
-                    selectlabel="Select"
+                    <TextField id="standard-basic" label="Standard" variant="standard" />
+                    <TextField
+                    id="standard-select-currency"
+                    select
+                    label="Select"
+                    
                     helperText="Please select your currency"
                     variant="standard"
                     >
-                    <MenuItem>
-                        English
-                    </MenuItem>
+                    {category.map((option) => (
+                        <MenuItem key={option.value} value={option.value}>
+                        {option.label}
+                        </MenuItem>
+                    ))}
                     </TextField>
                 </ThemeProvider>
             </div>
