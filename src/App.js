@@ -5,8 +5,9 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [word, setWord] = useState("")
+  const [word, setWord] = useState("");
   const [meanings, setMeanings] = useState([]);
+  const [category, setCategory] = useState("en");
 
   const dictionaryApi = async() => {
       try {
@@ -21,9 +22,9 @@ function App() {
     dictionaryApi();
   },[]);
   return (
-    <div className="App" style={{height:'100vh',backgroundColor:'#00008b', color:'white'}}>
+    <div className="App" style={{height:'100vh',backgroundColor:'#00008b', color:' #FAF9F6'}}>
       <Container maxWidth="md" style={{display:'flex', flexDirection:'column', height:'100vh'}}>
-        <Header />
+        <Header category={category} setCategory={setCategory} word={word} setWord={setWord} />
       </Container>
     </div>
   );
