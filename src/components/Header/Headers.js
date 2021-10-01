@@ -12,9 +12,13 @@ const Headers = ({ setCategory, category, word, setWord }) => {
             mode: 'dark',
         },
     });
+    const handleChange = (language) => {
+        setCategory(language);
+        setWord("");
+    }
     return (
         <div className="header">
-            <span className="header__title">React Word</span>
+            <span className="header__title">{word ? word: "React Word" }</span>
             <div className="header__inputs">
                 <ThemeProvider theme={darkTheme}>
                     <TextField 
@@ -27,8 +31,9 @@ const Headers = ({ setCategory, category, word, setWord }) => {
                         select
                         label="Language"
                         value={category}
-                        onChange={(e) => setCategory(e.target.value)}
+                        onChange={(e) => handleChange(e.target.value)}
                         variant="standard"
+                        className="header__select"
                     >
                         {categories.map((option) => (
                             <MenuItem key={option.label} value={option.label}>

@@ -1,3 +1,5 @@
+/* Header Style  */
+
 .header__title {
     font-size: 7vw;
     text-transform: uppercase;
@@ -12,4 +14,28 @@
     flex-direction: column;
     height: 35vh;
     width: 100%;
+}
+
+.header__inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__search {
+    width: 43%;
+}
+
+.header__select {
+    width: 43%;
+}
+
+@media (max-width:900px) {
+    .header {
+        justify-content: space-evenly;
+        height: 25vh;
+    }
+    .header__title {
+        font-size: 11vw;
+    }
 }
