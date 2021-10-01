@@ -29,7 +29,7 @@ const Headers = ({ setCategory, category, word, setWord }) => {
                     />
                     <TextField
                         select
-                        label="Language"
+                        label="Languages"
                         value={category}
                         onChange={(e) => handleChange(e.target.value)}
                         variant="standard"

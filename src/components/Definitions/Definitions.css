@@ -1,0 +1,11 @@
+.meanings {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.subTitle {
+    font-size: 4vw;
+    font-family: 'Monserrat', sans-serif;
+    font-family: 'Bonheur Royale', cursive;
+}
