@@ -4,6 +4,15 @@ import './Definitions.css';
 const Definitions = ({ word, category, meanings }) => {
     return (
         <div className="meanings">
+            {meanings[0] && word && category === "en" && (
+                <audio
+                    style={{ backgroundColor: "#000", borderRadius: 10 }}
+                    src={meanings[0].phonetics[0] && meanings[0].phonetics[0].audio}
+                    controls
+                >
+                    Your browser does not support the audio element.
+                </audio>
+            )}
             {word==="" ? ( <span className="subTitle">Start by typing a word in search... </span> ) : (
                 meanings.map((mean) => (
                     mean.meanings.map((item) => (
