@@ -24,7 +24,7 @@ function App() {
   },[word, category]);
 
   return (
-    <div className="App" style={{height:'100vh',backgroundColor:'#00008b', color:' #FAF9F6'}}>
+    <div className="App" style={{height:'100vh',backgroundColor:' #0072b1', color:' #FAF9F6'}}>
       <Container maxWidth="md" style={{display:'flex', flexDirection:'column', height:'100vh'}}>
         <Header category={category} setCategory={setCategory} word={word} setWord={setWord} />
         {meanings && (
