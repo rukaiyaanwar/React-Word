@@ -18,19 +18,19 @@ const Definitions = ({ word, category, meanings,LightMode }) => {
                     mean.meanings.map((item) => (
                         item.definitions.map((def) => (
                             <div className="singleMean" style={{ backgroundColor: LightMode? "#0072b1" :"white", color:LightMode?"white":"black" }}>
-                                <b>{def.definition}</b>
+                                <b>~{def.definition}</b>
                                 <hr style={{ backgroundColor:"black", width:"100"}} />
                                 {
                                     def.example && (
                                         <span>
-                                            <b>Example</b>
+                                            <b>Example: </b>
                                             {def.example}
                                         </span>
                                     )
                                 }
                                 {def.synonyms && (
                                     <span>
-                                        <b>Synonyms</b>
+                                        <b>Synonyms: </b>
                                         {def.synonyms.map((s) => `${s}, `)}
                                     </span>
                                 )}
