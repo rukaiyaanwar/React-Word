@@ -1,7 +1,7 @@
 import React from 'react';
 import './Definitions.css';
 
-const Definitions = ({ word, category, meanings,LightMode }) => {
+const Definitions = ({ word, category, meanings, LightMode }) => {
     return (
         <div className="meanings">
             {meanings[0] && word && category === "en" && (
